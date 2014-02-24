@@ -19,3 +19,7 @@ Simple Shortcodes is a plugin that works with any theme, but was made specifical
 2. Activate the plugin through the 'Plugins' menu in WordPress
 
 3. Visit Settings -> Writing for advanced configuration.
+
+## Customization
+
+In the plugin preferences, you can opt to disable the bundled scripts (CSS & Javascript) for manual enqueue in your theme. The SASS (+ compass) source is included as well.
