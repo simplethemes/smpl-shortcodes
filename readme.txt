@@ -20,15 +20,6 @@ This plugin works with any theme, but was made specifically to work with themes 
 2. Activate the plugin through the 'Plugins' menu in WordPress
 3. Visit Settings -> Writing for advanced configuration.
 
-== Frequently Asked Questions ==
-
-= A question that someone might have =
-
-An answer to that question.
-
-= What about foo bar? =
-
-Answer to foo bar dilemma.
 
 == Screenshots ==
 
