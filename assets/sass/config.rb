@@ -1,0 +1,9 @@
+# relative_assets = true
+http_path = "/"
+css_dir = "../css"
+output_style = :compressed
+# output_style = :expanded or :nested or :compact or :compressed
+#line_comments = false
+sass_dir = "/"
+images_dir = "../images"
+javascripts_dir = "../javascripts"

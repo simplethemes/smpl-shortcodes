@@ -1,0 +1,1133 @@
+@import "compass";
+/*
+Author: SimpleThemes LLC
+Author URI: http://www.simplethemes.com/
+*/
+
+/* @group Columns */
+
+.one_half {
+	width:48%
+}
+.one_third {
+	width:30.66%
+}
+.two_thirds {
+	width:65.33%
+}
+.one_fourth {
+	width:22%
+}
+.three_fourths {
+	width:74%
+}
+.one_fifth {
+	width:16.8%
+}
+.two_fifth {
+	width:37.6%
+}
+.three_fifth {
+	width:58.4%
+}
+.four_fifth {
+	width:79.2%
+}
+.one_sixth {
+	width:13.33%
+}
+.five_sixth {
+	width:82.67%
+}
+.one_half,
+.one_third,
+.two_thirds,
+.three_fourths,
+.one_fourth,
+.one_fifth,
+.two_fifth,
+.three_fifth,
+.four_fifth,
+.one_sixth,
+.five_sixth {
+	position:relative;
+	margin-right:4%;
+	margin-bottom:10px;
+	float:left
+}
+.last {
+	margin-right:0 !important
+}
+.clear {
+	clear:both;
+	display:block;
+	overflow:hidden;
+	visibility:hidden;
+	width:0;height:0
+}
+
+@media only screen and (max-width: 767px) {
+	.one_half,.one_third,.two_thirds,.three_fourths,.one_fourth,.one_fifth,.two_fifth,.three_fifth,.four_fifth,.one_sixth,.five_sixth {
+		width:100% !important;
+	}
+}
+
+/* @end */
+
+/* @group Responsive Video Embeds */
+
+	.video.true {
+		position: relative;
+		padding-bottom: 56.25%;
+		padding-top: 30px;
+		height: 0;
+		overflow: hidden;
+	}
+	.video.false {
+		padding-bottom: 0;
+		padding-top: 0;
+		height: auto;
+		overflow: visible;
+	}
+	.video.true iframe,
+	.video.true object,
+	.video.true embed {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.video.false iframe,
+	.video.false object,
+	.video.false embed {
+		position: relative;
+	}
+
+/* @end */
+
+
+/* @group Callouts */
+
+.st-callout {
+	background: url(../images/underlay.png) repeat-x 0 0 #efefef;
+	border: 1px solid #d5d5d5;
+  	@include border-radius (6px);
+	@include box-shadow (0px 0px 4px hsl(0, 0%, 90%));
+	margin-bottom: 20px;
+  	//behavior: $pie-behavior;
+  	position: relative;
+}
+
+.st-callout .button.center a.button {
+	float: none !important;
+}
+
+.st-callout.right {
+	float: right;
+	right: 0;
+	display: inline-block;
+}
+
+.st-callout.left {
+	float: left;
+	left: 0;
+	display: inline-block;
+}
+
+.st-callout.center {
+	float: none;
+	clear: both;
+	text-align: left;
+	margin: 0 auto 20px auto;
+}
+
+.st-callout .inside {
+	padding: 20px;
+}
+.st-callout.hastitle .inside {
+	padding: 0px 20px 20px 20px;
+}
+
+.st-callout h4.st-callout-title {
+	background: url(../images/boxtitle.png) repeat-x 0 0px #efefef;
+  	@include border-radius (6px 6px 0px 0px);
+	text-shadow: 0 1px 1px #edeeed;
+	margin: 0px 0px 10px 0px;
+	padding: 12px 0px 15px 0px;
+	text-indent: 20px;
+	width: 100%;
+	font-size: 1.25em;
+	line-height: $base-line-height;
+	color: #434343;
+  	//behavior: $pie-behavior;
+  	position: relative;
+}
+
+.st-callout h4.st-callout-title.center {
+	text-align: center;
+	text-indent: -40px !important;
+}
+
+.st-callout a {
+	text-shadow: none !important;
+	text-decoration: underline;
+	color: inherit;
+}
+.st-callout a:hover {
+	text-decoration: none;
+}
+
+
+.st-callout.white {
+	background-color: hsl(0, 0%, 100%);
+	border-color: hsl(0, 0%, 95%);
+	text-shadow: 0 -1px 0 #fff;
+	color: #555;
+}
+.st-callout.white h4.st-callout-title {
+	background-image:none !important;
+	background-color: hsl(0, 0%, 98%);
+	border-bottom: 1px solid hsl(0, 0%, 95%);
+	text-shadow: 1px -1px 0px #fff;
+	color: hsl(0, 0%, 20%);
+}
+
+
+.st-callout.black {
+	background:url(../images/underlay.png) repeat-x 0 0 #111;
+	border-color: #222;
+	text-shadow: 0 -1px 0 #000;
+	color: #ccc;
+}
+.st-callout.black h4.st-callout-title {
+	background-color: #111;
+	text-shadow: 0 1px 1px #000;
+	color: #fff;
+}
+
+.st-callout.pink {
+	background:url(../images/underlay.png) repeat-x 0 0 #bc006e;
+	border-color: #970058;
+	text-shadow: 0 -1px 0 #901151;
+	color: #fff;
+}
+.st-callout.pink h4.st-callout-title {
+	background-color: #bc006e;
+	text-shadow: 0 1px 1px #000;
+	color: #f2d4e3;
+}
+.st-callout.pink a {color: #f798cc;}
+
+
+
+.st-callout.red{
+	background:url(../images/underlay.png) repeat-x 0 0 #c70000;
+	border-color: #af1800;
+	text-shadow: 0 -1px 0 #8d0000;
+	color: #fff;
+}
+.st-callout.red h4.st-callout-title {
+	background-color: #c70000;
+	text-shadow: 0 1px 1px #ac0000;
+	color: #fff;
+}
+
+.st-callout.red a {
+	color: #ffffff;
+}
+
+
+.st-callout.orange{
+	background: url(../images/underlay.png) repeat-x 0 0 #d96300;
+	border-color: #d86200;
+	text-shadow: 0 -1px 0 #bd5500;
+	color: #fff;
+}
+.st-callout.orange h4.st-callout-title {
+	background-color: #d96300;
+	text-shadow: 0 1px 1px #a84a00;
+	color: #fff;
+}
+.st-callout.orange a {
+	color: #ffffff;
+}
+
+.st-callout.lightblue {
+	background: url(../images/underlay.png) repeat-x 0 0 #6bc6fe;
+	border-color: #52bdff;
+	text-shadow: 0 1px 0 #75d1ff;
+	color: #22516a;
+}
+.st-callout.lightblue h4.st-callout-title {
+	background-color: #6bc6fe;
+	text-shadow: 0 1px 1px #0075bd;
+	color: #ffffff;
+}
+.st-callout.lightblue a {
+	color: #005286;
+}
+
+.st-callout.blue{
+	background: url(../images/underlay.png) repeat-x 0 0 #0698e0;
+	border-color: #0389ca;
+	text-shadow: 0 -1px 0 #0073ac;
+	color: #ffffff;
+}
+.st-callout.blue h4.st-callout-title {
+	background-color: #0698e0;
+	text-shadow: 0 1px 1px #0597df;
+	color: #ffffff;
+}
+.st-callout.blue a {
+	color: #0458c3;
+}
+
+
+.st-callout.darkblue{
+	background: url(../images/underlay.png) repeat-x 0 0 #005589;
+	border-color: #00578d;
+	text-shadow: 0 -1px 0 #004e75;
+	color: #ffffff;
+}
+.st-callout.darkblue h4.st-callout-title {
+	background-color: #005589;
+	text-shadow: 0 1px 1px #005589;
+	color: #ffffff;
+}
+.st-callout.darkblue a {
+	color: #22b3fb;
+}
+
+
+.st-callout.green {
+	background: url(../images/underlay.png) repeat-x 0 0 #78a401;
+	border-color: #78a401;
+	text-shadow: 0 -1px 0 #618600;
+	color: #ffffff;
+}
+.st-callout.green h4.st-callout-title {
+	background-color: #78a401;
+	text-shadow: 0 1px 1px #618600;
+	color: #ffffff;
+}
+.st-callout.green a {
+	color: #f1fece;
+}
+
+.st-callout div.button a,
+.st-callout div.button a:active {
+	@include box-shadow (0px 0px 0px 0px transparent);
+}
+
+@media only screen and (max-width: 767px) {
+	.st-callout {
+		width:100% !important;
+	}
+}
+
+
+
+/* Inset/Outset */
+
+/* Callouts */
+.inset {
+	$inset-color: hsl(0, 0%, 94%);
+	background-color: $inset-color;
+	@include box-shadow (inset 1px 1px 10px darken($inset-color,10%));
+  	@include border-radius (6px);
+  	@include single-text-shadow(1px, 1px, 0, $color: lighten($inset-color,5%));
+	padding: 20px;
+	margin-top: $base-line-height;
+  	//behavior: $pie-behavior;
+  	position: relative;
+}
+
+
+.cta,.outset {
+	$outset-color: hsl(0, 0%, 94%);
+	background-color: $outset-color;
+	border: 1px solid darken($outset-color,7%);
+  	@include border-radius (6px);
+  	@include single-text-shadow(1px, 1px, 0, $color: lighten($outset-color,10%));
+	@include box-shadow (inset 1px 1px 0 lighten($outset-color,10%),inset -1px -1px 0 lighten($outset-color,5%));
+	padding: 20px;
+	margin-top: $base-line-height;
+  	//behavior: $pie-behavior;
+  	position: relative;
+}
+
+.cta p {
+	margin: 0;
+	padding: 0;
+}
+
+.outset a,.inset a {
+	text-shadow:none;
+}
+
+.cta h3 {
+	font-size: 1.25em;
+	line-height: 100%;
+	margin-top: 0;
+	text-shadow: #fff 1px -1px 0;
+}
+
+@media only screen and (max-width: 767px) {
+	.cta {
+		width:100% !important;
+	}
+}
+
+
+
+/* @end */
+
+
+
+
+/* @group Latest Posts (shortcode) */
+
+
+.latestposts .latest-item {
+	padding-bottom: 15px;
+	margin-bottom: 15px;
+}
+.one_third .latestposts .latest-item {
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+.latestposts .latest-excerpt p {
+	font-size: 12px;
+	margin: 0;
+}
+
+.latestposts .latest-title a {
+	font-size: 16px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.latestposts a.more-link {
+	padding: 2px 10px 2px 10px;
+	background-image: none;
+	font-size: 12px;
+}
+
+.latest-img {
+	border: 1px solid #fff;
+	background-color: #f4f4f4;
+	padding: 4px;
+	margin: 5px 12px 4px 0px;
+    -webkit-box-shadow: 1px 1px 0px #CCC;
+    -moz-box-shadow: 1px 1px 0px #CCC;
+    box-shadow: 1px 1px 0px #CCC;
+	position: relative;
+}
+
+
+/* @end */
+
+/* @group Tabs */
+
+ul.tabs {
+		display: block;
+		margin: 0 0 20px 0;
+		padding: 0;
+		border-bottom: solid 1px #ddd;
+		list-style: none;
+		}
+	ul.tabs li {
+		display: block;
+		width: auto;
+		height: 30px;
+		padding: 0;
+		float: left;
+		margin-bottom: 0;
+		list-style: none;
+		}
+	ul.tabs li a {
+		display: block;
+		text-decoration: none;
+		width: auto;
+		height: 30px;
+		padding: 0px 20px;
+		line-height: 30px;
+		border: solid 1px #ddd;
+		border-width: 1px 0 0 1px;
+		margin: 0;
+		background: #f5f5f5;
+		font-size: 13px;
+	}
+	ul.tabs li a.active {
+		font-weight: bold;
+		background: #fff;
+		height: 34px;
+		position: relative;
+		top: -4px;
+		padding-top: 4px;
+		border-right-width: 1px;
+		margin: 0 -1px 0 0;
+		color: #111;
+		@include border-radius(2px 2px 0px 0px);
+		position: relative;
+		}
+	ul.tabs li:first-child a {
+		@include border-radius(2px 0px 0px 0px);
+	}
+	ul.tabs li:last-child a {
+		border-width: 1px 1px 0 1px;
+		@include border-radius(0px 2px 0px 0px);
+	}
+
+	ul.tabs-content { margin: 0 16px 0 16px; display: block; }
+	ul.tabs-content > li { display:none; list-style: none;}
+	ul.tabs-content > li.active { display: block; }
+
+
+	/* Clearfixing tabs for beautiful stacking */
+	ul.tabs:before,
+	ul.tabs:after {
+	  content: '\0020';
+	  display: block;
+	  overflow: hidden;
+	  visibility: hidden;
+	  width: 0;
+	  height: 0; }
+	ul.tabs:after {
+	  clear: both; }
+	ul.tabs {
+	  zoom: 1;
+	}
+
+/* @end */
+
+/* @group Toggles */
+
+/* Up Toggle State */
+
+p.trigger {
+	display: block;
+	padding:  8px 8px 8px 34px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+	font-size: 1.15em;
+	line-height: 145%;
+	background: hsl(0, 0%, 98%) url(../images/16_expand.png) no-repeat 10px center;
+	border-bottom: 1px solid hsl(0, 0%, 93%);
+	border-top: 1px solid hsl(0, 0%, 99%);
+    //behavior: $pie-behavior;
+    position: relative;
+}
+
+/* Hover Toggle State */
+
+p.trigger:hover {
+	background: hsl(0, 0%, 99%) url(../images/16_expand.png) no-repeat 10px center;
+}
+
+/* Active Toggle State */
+
+p.trigger.active {
+	background: hsl(0, 0%, 98%) url(../images/16_collapse.png) no-repeat 10px center;
+}
+
+
+p.trigger a {
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.toggle_container {
+	padding: 10px 0 0 0;
+	margin-bottom: 1px;
+}
+
+/* @end */
+
+
+/* @group Notifications */
+
+/* Essentials */
+.note.right {float: right;right: 0;display: inline-block;}
+.note.left {float: left;left: 0;display: inline-block;}
+.note.center {float: none;clear: both;}
+
+div.note a {text-decoration: underline;}
+div.note a:hover {text-decoration: none;}
+
+div.note {
+	text-align: left;
+	padding: 15px;
+	border: 1px solid;
+	@include border-radius(2px);
+	margin: 15px 0px 15px 0px;
+    //behavior: $pie-behavior;
+    position: relative;
+}
+
+.note.no-icon .note-inner {
+	padding-left: 0px !important;
+	background-image: none !important;
+}
+
+/* Alert */
+
+$color : #dc0909;
+.note.alert,.note.error {
+	border-color: tint($color,70%);
+	color: darken($color,15%);
+	background-color: lighten($color,50%);
+	text-shadow: 1px 1px 0px lighten($color,70%);
+}
+
+.note.alert .note-inner,
+.note.error .note-inner {
+	background: url(../images/alert.png) no-repeat 0 50%;
+	padding-left: 40px;
+}
+
+.note.alert a,
+.note.error a {
+	color: $color !important;
+	text-shadow:none;
+}
+
+
+/* Info */
+
+$color : #44B1E1;
+.note.info {
+	border-color: tint($color,50%);
+	color: darken($color,25%);
+	background-color: lighten($color,37%);
+	text-shadow: 1px 1px 0px lighten($color,70%);
+}
+
+.note.info .note-inner {
+	background: url(../images/info.png) no-repeat 0 50%;
+	padding-left: 40px;
+}
+
+.note.info a {
+	color: $color !important;
+	text-shadow:none;
+}
+
+/* Warning */
+
+$color : #fdfbb9;
+.note.warn {
+	background-color: tint($color,85%);
+	color: hsl(0, 0%, 30%);
+	border-color: darken($color,25%);
+	text-shadow: 1px 1px 0px lighten($color,20%);
+}
+
+.note.warn .note-inner {
+	background: url(../images/warning.png) no-repeat 0 50%;
+	padding-left: 40px;
+}
+
+.note.warn a {
+	//color: inherit !important;
+	text-shadow:none;
+}
+
+
+/* Accept */
+
+$color : #b3de7e;
+.note.accept,.note.download,.note.success {
+	background-color: tint($color,85%);
+	color: darken($color, 40%);
+	border-color: shade($color, 10%);
+	text-shadow: 1px 1px 0px tint($color,90%);
+}
+
+.note.accept .note-inner,
+.note.success .note-inner,
+.note.download .note-inner {
+	background: url(../images/accept.png) no-repeat 0 50%;
+	padding-left: 40px;
+}
+.note.download .note-inner {
+	background: url(../images/file_download.png) no-repeat 0 50%;
+}
+
+.note.accept a,
+.note.success a,
+.note.download a {
+	color: darken($color, 50%) !important;
+	text-shadow:none;
+}
+
+/* Idea */
+
+$color : #fdfbb9;
+.note.idea {
+	background-color: tint($color,85%);
+	color: hsl(0, 0%, 30%);
+	border-color: darken($color,25%);
+	text-shadow: 1px 1px 0px lighten($color,20%);
+}
+
+.note.idea .note-inner {
+	background: url(../images/lightbulb.png) no-repeat 0 50%;
+	padding-left: 40px;
+}
+
+.note.idea a {
+	//color: inherit !important;
+	text-shadow:none;
+}
+
+/* @end */
+
+/* @group Dividers */
+
+hr.dashed {
+	background:none;
+	border-collapse: collapse;
+	height: 1px;
+	width: 100%;
+	border-style: dashed;
+	margin:10px auto 20px auto;
+}
+
+hr.solid {
+	background:none;
+	border-collapse: collapse;
+	height: 1px;
+	width: 100%;
+	border-style: solid;
+	margin:10px auto 20px auto;
+}
+
+hr.solid {
+	background:none;
+	border-collapse: collapse;
+	height: 1px;
+	width: 100%;
+	border-style: solid;
+	margin:10px auto 20px auto;
+}
+
+.clearfade {
+	height: 32px;
+	background: url(../images/fadeline-light.png) no-repeat 0 50%;
+	margin:10px auto 20px auto;
+}
+
+/* @end */
+
+
+// Linear Gradient Mixin
+$pie-behavior: url("PIE.htc");
+
+@mixin skeleton-linear-gradient($start-gradient, $stop-gradient) {
+    background: $stop-gradient;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-gradient), color-stop(100%,$stop-gradient));
+    background: -webkit-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: -o-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: -ms-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: -moz-linear-gradient(top, $start-gradient 0%,$stop-gradient 100%);
+    background: linear-gradient(top bottom, $start-gradient 0%,$stop-gradient 100%);
+    background-clip: border-box;
+    -pie-background: linear-gradient(top, $start-gradient, $stop-gradient);
+    behavior: $pie-behavior;
+    position: relative;
+}
+
+// Button Mixin
+
+@mixin simple-button ($base-hue, $base-saturation, $base-lightness, $color) {
+
+  $start-gradient: tint(hsl($base-hue, $base-saturation, $base-lightness), 5%);
+  $stop-gradient: shade(hsl($base-hue, $base-saturation, $base-lightness), 5%);
+
+  $inset-shadow: tint(hsl($base-hue, $base-saturation, $base-lightness), 15%);
+  $text-shadow: shade(hsl($base-hue, $base-saturation, $base-lightness), 20%);
+
+  $text-shadow-h-offset: 0;
+  $text-shadow-v-offset: 1px;
+  $text-shadow-blur: 0px;
+
+
+  // for light buttons
+  @if $base-lightness > 70% {
+    // lighten the text shadow and offset light direction
+    $inset-shadow: lighten(hsl($base-hue, $base-saturation, $base-lightness), 11%);
+    $text-shadow: lighten(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+    $start-gradient: lighten(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+    $stop-gradient: darken(hsl($base-hue, $base-saturation, $base-lightness), 5%);
+    $text-shadow-v-offset: 1px;
+    @include transition-property(all);
+    @include transition-duration(.5s);
+    @include transition-timing-function(linear);
+  }
+
+
+  color: $color !important;
+  line-height: 1.5em;
+  text-align: center;
+  text-decoration:none;
+  display: inline-block;
+  vertical-align: middle;
+  border: none;
+  @include single-text-shadow($text-shadow-h-offset, $text-shadow-v-offset, $text-shadow-blur, $color: $text-shadow);
+  @include border-radius (2px);
+  //@include box-shadow (inset 0 1px 0 0 $inset-shadow,0 1px 1px 0 #fff);
+  @include skeleton-linear-gradient($start-gradient, $stop-gradient);
+  background-repeat: repeat-x;
+  &:hover {
+    $start-gradient: scale-saturation(hsl($base-hue, $base-saturation, $base-lightness), 30%);
+    $stop-gradient: scale-saturation(hsl($base-hue, $base-saturation, $base-lightness), 30%);
+    // for light buttons
+    @if $base-saturation < 20% {
+      $start-gradient: lighten(hsl($base-hue, $base-saturation, $base-lightness), 10%);
+      $stop-gradient: darken(hsl($base-hue, $base-saturation, $base-lightness), 15%);
+    }
+    @if $base-lightness > 70% {
+      $text-shadow-v-offset: 1px;
+    }
+    @include skeleton-linear-gradient($start-gradient, $stop-gradient);
+    //@include box-shadow (inset 0 1px 0 0 $inset-shadow);
+    cursor: pointer;
+  }
+
+  &:active {
+    $inset-shadow: saturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 17%), 7%);
+    @if $base-saturation < 11% {
+    $inset-shadow: desaturate(darken(hsl($base-hue, $base-saturation, $base-lightness), 17%), 7%);
+    }
+    @include box-shadow (inset 0 2px 6px 0 $inset-shadow,inset 0 0 0 0 $inset-shadow,0 1px 1px 0 #eee);
+  }
+}
+
+// Defaults
+
+div.button-alt,
+div.button,
+div.button.small,
+div.button.large,
+div.button.medium {
+	background-image: none;
+	margin: .5em 1em;
+	padding: 0;
+	display: inline-block;
+	font-stretch: narrower;
+	font-weight: normal;
+	text-align: center;
+  white-space: nowrap;
+}
+
+div.button {font-size: $base-font-size;}
+
+div.button.left {float: left;}
+div.button.right {float: right;}
+
+div.button.center,
+div.button.middle {
+	margin: 10px auto;
+	text-align: center;
+	display: inherit;
+	float: none !important;
+}
+
+
+.button.mini a {
+  padding: 3px 6px !important;
+  font-size: .75em;
+  line-height: 1em;
+}
+
+.button.small a {
+  padding: .5em 1em !important;
+  font-size: .85em !important;
+  line-height: .85em !important;
+}
+.button.small {
+  border-bottom:none !important;
+}
+
+button,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button a,
+.button.medium a {
+  padding: .5em 1em !important;
+  font-size: 1em !important;
+  line-height: 1em !important;
+  margin-bottom:0 !important;
+}
+
+.button.large a {
+  padding: .5em 1.5em !important;
+  font-size: 1.2em !important;
+  line-height: 1.2em !important;
+}
+.button.huge a {
+  padding: .5em 1.55em !important;
+  font-size: 1.5em !important;
+  line-height: 1.5em !important;
+  font-weight: bold !important;
+}
+
+.button a:hover {
+  text-decoration: none !important;
+}
+
+// Captions
+
+a.button.mini span.btn_caption,
+a.button.small span.btn_caption,
+a.button.medium span.btn_caption,
+a.button.large span.btn_caption,
+a.button.huge span.btn_caption,
+a.button span.btn_caption {
+	font-weight: normal !important;
+  font-size: .85em !important;
+  line-height: 1em !important;
+  padding: 0 !important;
+  margin:0 !important;
+  display: block;
+}
+
+/* @group White  */
+
+a.button.white {
+  @include simple-button(0, 0%, 100%, #111);
+}
+a.button.white span.btn_caption {
+  color: gray !important;
+  text-shadow: 0 1px 0 white;
+}
+
+/* @end */
+
+/* @group Gray  */
+
+a.button.gray {
+  @include simple-button(0, 0%, 85%, #333);
+}
+a.button.gray span.btn_caption {
+  color: gray !important;
+  text-shadow: 0 1px 0 white;
+}
+
+/* @end */
+
+/* @group Black  */
+
+a.button.black {
+  @include simple-button(0, 0%, 15%, #f4f4f4);
+}
+a.button.black span.btn_caption {
+  color: gray !important;
+  text-shadow: 0 1px 0 #000;
+}
+
+/* @end */
+
+
+// /* @group Light Blue  */
+//
+// a.button.lightblue {
+//   @include simple-button(206, 71%, 60%, #fff);
+// }
+//
+// a.button.lightblue span.btn_caption {
+//   color: #acd3f1 !important;
+//   text-shadow: 0 1px 0 #258CDA;
+// }
+//
+// /* @end */
+
+
+/* @group Blue  */
+
+a.button.blue {
+  @include simple-button(211, 72%, 43%, #fff);
+}
+a.button.blue span.btn_caption {
+  color: #acd3f1 !important;
+  text-shadow: 0 1px 0 #3B639B;
+}
+
+/* @end */
+
+
+// /* @group Dark Blue  */
+//
+// a.button.darkblue {
+//   @include simple-button(215, 70%, 25%, #fff);
+// }
+// a.button.darkblue span.btn_caption {
+//   color: hsl(215, 70%, 75%) !important;
+//   text-shadow: 0 1px 0 hsl(215, 70%, 5%);
+// }
+
+//* @end */
+
+
+// /* @group Light Green  */
+//
+// a.button.lightgreen {
+//   @include simple-button(93, 57%, 56%, #fff);
+// }
+// a.button.lightgreen span.btn_caption {
+//   color: hsl(93, 57%, 80%) !important;
+//   text-shadow: 0 1px 0 hsl(93, 57%, 36%);
+// }
+
+//* @end */
+
+
+/* @group Green  */
+
+a.button.green {
+  @include simple-button(93, 57%, 36%, #fff);
+}
+a.button.green span.btn_caption {
+  color: hsl(93, 57%, 80%) !important;
+  text-shadow: 0 1px 0 hsl(93, 57%, 16%);
+}
+
+/* @end */
+
+/* @group Magenta  */
+
+a.button.magenta {
+  // #E3008C
+  @include simple-button(323, 80%, 45%, #fff);
+}
+a.button.magenta span.btn_caption {
+  color: hsl(323, 100%, 85%) !important;
+  text-shadow: 0 1px 0 hsl(323, 100%, 25%);
+}
+
+/* @end */
+
+/* @group Teal  */
+
+a.button.teal {
+  // #58CB8E
+  @include simple-button(148, 53%, 57%, #fff);
+}
+a.button.teal span.btn_caption {
+  color: hsl(148, 53%, 27%) !important;
+  text-shadow: 0 1px 0 hsl(148, 53%, 67%);
+}
+
+/* @end */
+
+
+// /* @group Dark Green  */
+//
+// a.button.darkgreen {
+//   @include simple-button(93, 57%, 23%, #fff);
+// }
+// a.button.darkgreen span.btn_caption {
+//   color: hsl(93, 57%, 80%) !important;
+//   text-shadow: 0 1px 0 hsl(93, 57%, 16%);
+// }
+
+//* @end */
+
+
+/* @group Red  */
+
+a.button.red,
+a.button.lightred,
+a.button.error {
+  @include simple-button(0, 83%, 45%, #fff);
+}
+a.button.red span.btn_caption,
+a.button.lightred span.btn_caption,
+a.button.error span.btn_caption {
+  color: hsl(0, 73%, 81%) !important;
+  text-shadow: 0 1px 0 hsl(0, 83%, 35%);
+}
+
+/* @end */
+
+
+// /* @group Dark Red  */
+//
+// a.button.darkred {
+//   @include simple-button(0, 83%, 30%, #fff);
+// }
+// a.button.darkred span.btn_caption {
+//   color: hsl(0, 83%, 90%) !important;
+//   text-shadow: 0 1px 0 hsl(0, 83%, 20%);
+// }
+//
+// /* @end */
+
+
+/* @group Orange  */
+
+a.button.orange,
+a.button.yellow,
+a.button.warn {
+  @include simple-button(35, 94%, 51%, #fff);
+}
+a.button.orange span.btn_caption,
+a.button.yellow span.btn_caption,
+a.button.warn span.btn_caption {
+  color: hsl(35, 84%, 85%) !important;
+  text-shadow: 0 1px 0 hsl(35, 94%, 31%);
+}
+
+/* @end */
+
+// /* @group Purple  */
+//
+// a.button.purple {
+//   @include simple-button(283, 100%, 36%, #fff);
+// }
+// a.button.purple span.btn_caption {
+//   color: hsl(283, 100%, 85%) !important;
+//   text-shadow: 0 1px 0 hsl(283, 100%, 25%);
+// }
+//
+// /* @end */
+
+// /* @group Pink  */
+//
+// a.button.pink {
+//   @include simple-button(328, 99%, 42%, #fff);
+// }
+// a.button.pink span.btn_caption {
+//   color: hsl(328, 99%, 85%) !important;
+//   text-shadow: 0 1px 0 hsl(328, 99%, 20%);
+// }
+
+//* @end */
+
+// /* @group Brown  */
+//
+// a.button.brown {
+//   @include simple-button(18, 59%, 33%, #fff);
+// }
+// a.button.brown span.btn_caption {
+//   color: hsl(43, 79%, 59%) !important;
+//   text-shadow: 0 1px 0 hsl(18, 59%, 20%);
+// }
+//
+// /* @end */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 320px) and (max-width : 480px) {
+  a.more-link {
+    margin: 20px auto;
+    padding: 10px 0px !important;
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
