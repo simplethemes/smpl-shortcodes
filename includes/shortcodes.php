@@ -181,7 +181,7 @@ function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
     }
 
     // Return column
-    $content = '<div class="'.$class.$last.'">'.$content.'</div><div class="clear"></div>';
+    $content = '<div class="'.$class.'">'.$content.'</div><div class="clear"></div>';
     return do_shortcode( $content );
 
 }
@@ -407,23 +407,27 @@ function smpl_shortcode_clearfade() {
  * @param array $atts Standard WordPress shortcode attributes
  * @param string $content The enclosed content
  */
-function smpl_shortcode_blockquote( $atts ) {
-
-    $defaults = array(
+function smpl_shortcode_blockquote( $atts, $content = null ) {
+    extract(shortcode_atts(array(
         'quote'         => '',
         'source'        => '',      // Source of quote
         'source_link'   => '',      // URL to link source to
         'align'         => '',      // How to align blockquote - left, right
-        'max_width'     => '',      // Meant to be used with align left/right - 300px, 50%, etc
         'class'         => ''       // Any additional CSS classes
-    );
+    ),$atts));
+
     $atts = wp_parse_args( $atts, $defaults );
 
-    $output = '';
-
-    if ( function_exists( 'smpl_get_blockquote' ) ) {
-        $output = smpl_get_blockquote( $atts );
+    $output .= '<blockquote>';
+    $output .= $quote;
+    if ($source) {
+        if ($source_link) {
+            $output .= sprintf( '<br /><em><a rel="external" href="%s">%s</a></em>', $source_link,$source );
+        } else {
+            $output .= sprintf( '<br /><em>&mdash; %s</em>', $source );
+        }
     }
+    $output.= '</blockquote>';
 
     return $output;
 }

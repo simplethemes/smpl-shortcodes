@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=order
 Tags: shortcodes, columns, notifications, buttons, skeleton, editor, callout, youtube, vimeo
 Requires at least: 3.0.1
 Tested up to: 3.8
-Stable tag: 1.0
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -32,3 +32,9 @@ This plugin works with any theme, but was made specifically to work with themes 
 
 = 1.0 =
 * Initial Release
+
+= 1.0.1 =
+* Added support for legacy shortcodes
+
+= 1.0.2 =
+* Fixed blockquotes shortcode

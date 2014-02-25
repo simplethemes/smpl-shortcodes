@@ -33,11 +33,6 @@ smplShortcodeAtts={
 			help:"Select how you'd like to align the quote.",
 			controlType:"select-control",
 			selectValues:['none', 'left', 'right']
-		},
-		{
-			label:"Quote Max Width",
-			id:"max_width",
-			help:"Enter a max width for the quote. This works well when combined with aligning the quote to the right or left. Ex: 300px, 50%, etc.",
 		}
 	],
 	defaultContent:"",
