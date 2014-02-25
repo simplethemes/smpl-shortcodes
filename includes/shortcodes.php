@@ -116,6 +116,77 @@ function smpl_shortcode_column( $atts, $content = null, $tag = '' ) {
 
 }
 
+function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
+
+    //// Determine if column is last in row
+    //$last = '';
+    //if( isset( $atts[0] ) && trim( $atts[0] ) == 'last')
+    //    $last = ' last';
+
+    // Determine width of column
+    $class = '';
+
+    switch ( $tag ) {
+
+        case 'one_sixth_last' :
+            $class .= 'one_sixth last';
+            break;
+
+        case 'one_fourth_last' :
+            $class .= 'one_fourth last';
+            break;
+
+        case 'one_third_last' :
+            $class .= 'one_third last';
+            break;
+
+        case 'one_half_last' :
+            $class .= 'one_half last';
+            break;
+
+        case 'two_third_last' :
+            $class .= 'two_thirds last';
+            break;
+
+        case 'three_fourth_last' :
+            $class .= 'three_fourths last';
+            break;
+
+        case 'one_fifth_last' :
+            $class .= 'one_fifth last';
+            break;
+
+        case 'two_fifth_last' :
+            $class .= 'two_fifths last';
+            break;
+
+        case 'three_fifth_last' :
+            $class .= 'three_fifth last';
+            break;
+
+        case 'four_fifth_last' :
+            $class .= 'four_fifth last';
+            break;
+
+    }
+
+    // Is user adding additional classes?
+    if ( isset( $atts['class'] ) ) {
+        $class .= ' '.$atts['class'];
+    }
+
+    // Force wpautop in shortcode? (not relevant if columns not wrapped in [raw])
+    if ( isset( $atts['wpautop'] ) && trim( $atts['wpautop'] ) == 'true') {
+        $content = wpautop( $content );
+    }
+
+    // Return column
+    $content = '<div class="'.$class.$last.'">'.$content.'</div><div class="clear"></div>';
+    return do_shortcode( $content );
+
+}
+
+
 /**
  * Clear Row
  *
@@ -315,6 +386,18 @@ function smpl_shortcode_divider( $atts, $content = null ) {
             break;
     }
 }
+
+
+
+/**
+ * Clear Fade
+ *
+ * @since 1.0.1
+ */
+function smpl_shortcode_clearfade() {
+    return '<div class="clear"></div><div class="clearfade"></div>';
+}
+
 
 /**
  * Blockquote

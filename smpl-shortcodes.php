@@ -2,8 +2,8 @@
 /*
 Plugin Name: Simple Shortcodes
 Description: This plugin works in conjuction with the SMPL framework to create shortcodes for many of the framework's internal elements.
-Version: 1.0.0
-Author: SMPL
+Version: 1.0.1
+Author: simplethemes
 Author URI: http://www.simplethemes.com
 License: GPL2
 
@@ -90,10 +90,25 @@ function smpl_shortcodes_init() {
 		add_shortcode( 'four_fifth', 'smpl_shortcode_column' );			// 4/5
 		add_shortcode( 'clear', 'smpl_shortcode_clear' );				// Clear row
 
+		// Legacy Columns
+		add_shortcode( 'one_sixth_last', 'smpl_shortcode_column_last' );			// 1/6
+		add_shortcode( 'one_fourth_last', 'smpl_shortcode_column_last' );			// 1/4
+		add_shortcode( 'one_third_last', 'smpl_shortcode_column_last' );			// 1/3
+		add_shortcode( 'one_half_last', 'smpl_shortcode_column_last' );			// 1/2
+		add_shortcode( 'two_third_last', 'smpl_shortcode_column_last' );			// 2/3
+		add_shortcode( 'three_fourth_last', 'smpl_shortcode_column_last' );		// 3/4
+		add_shortcode( 'one_fifth_last', 'smpl_shortcode_column_last' );			// 1/5
+		add_shortcode( 'two_fifth_last', 'smpl_shortcode_column_last' );			// 2/5
+		add_shortcode( 'three_fifth_last', 'smpl_shortcode_column_last' );		// 3/5
+		add_shortcode( 'four_fifth_last', 'smpl_shortcode_column_last' );			// 4/5
+
+
 		// Components
 		add_shortcode( 'button', 'smpl_shortcode_button' );
 		add_shortcode( 'note', 'smpl_shortcode_alert' );
 		add_shortcode( 'divider', 'smpl_shortcode_divider' );
+		add_shortcode( 'clearline', 'smpl_shortcode_divider' );
+		add_shortcode( 'clearfade', 'smpl_shortcode_clearfade' );
 		add_shortcode( 'cta', 'smpl_shortcode_cta' );
 		add_shortcode( 'callout', 'smpl_shortcode_callout' );
 
