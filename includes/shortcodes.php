@@ -3,34 +3,34 @@
  * SMPL Shortcodes
  *
  * (1) Columns
- *		- one_sixth
- *		- one_fourth
- *		- one_third
- *		- one_half
- *		- two_third
- *		- three_fourth
- *		- one_fifth
- *		- two_fifth
- *		- three_fifth
- *		- four_fifth
- *		- three_tenth
- *		- seven_tenth
+ *    - one_sixth
+ *    - one_fourth
+ *    - one_third
+ *    - one_half
+ *    - two_third
+ *    - three_fourth
+ *    - one_fifth
+ *    - two_fifth
+ *    - three_fifth
+ *    - four_fifth
+ *    - three_tenth
+ *    - seven_tenth
  * (2) Components
  *      - alert
- *		- button
+ *    - button
  *      - divider
- *		- cta
+ *    - cta
  *      - callout
  * (3) Inline Elements
  *      - blockquote
  *      - youtube
  *      - vimeo
  * (3) Tabs, Accordion, & Toggles
- *		- tabs
- *		- accordion
- *		- toggle
+ *    - tabs
+ *    - accordion
+ *    - toggle
  * (6) Display Posts
- *		- post_grid
+ *    - post_grid
  */
 
 /*-----------------------------------------------------------*/
@@ -49,12 +49,12 @@
 function smpl_shortcode_column( $atts, $content = null, $tag = '' ) {
 
     // Determine if column is last in row
-	$last = '';
-	if( isset( $atts[0] ) && trim( $atts[0] ) == 'last')
-		$last = ' last';
+  $last = '';
+  if( isset( $atts[0] ) && trim( $atts[0] ) == 'last')
+    $last = ' last';
 
     // Determine width of column
-	$class = '';
+  $class = '';
 
     switch ( $tag ) {
 
@@ -111,7 +111,7 @@ function smpl_shortcode_column( $atts, $content = null, $tag = '' ) {
     }
 
     // Return column
-	$content = '<div class="'.$class.$last.'">'.$content.'</div>';
+  $content = '<div class="'.$class.$last.'">'.$content.'</div>';
     return do_shortcode( $content );
 
 }
@@ -193,7 +193,7 @@ function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
  * @since 1.0.0
  */
 function smpl_shortcode_clear() {
-	return '<div class="clear"></div>';
+  return '<div class="clear"></div>';
 }
 
 /*-----------------------------------------------------------*/
@@ -250,8 +250,8 @@ function smpl_shortcode_cta( $atts, $content = null ) {
     $has_icon = '';
 
     $default = array(
-        'style' 	=> 'blue', // blue, green, grey, orange, purple, red, teal, magenta
-        'icon' 		=> ''
+        'style'   => 'blue', // blue, green, grey, orange, purple, red, teal, magenta
+        'icon'    => ''
     );
     extract( shortcode_atts( $default, $atts ) );
 
@@ -260,8 +260,8 @@ function smpl_shortcode_cta( $atts, $content = null ) {
 
     // Add icon
     if( $icon ) {
-    	$classes .= ' info-box-has-icon';
-    	$content = sprintf( '<i class="icon fa fa-%s"></i>%s', $icon, do_shortcode($content) );
+      $classes .= ' info-box-has-icon';
+      $content = sprintf( '<i class="icon fa fa-%s"></i>%s', $icon, do_shortcode($content) );
     }
 
     $output = sprintf( '<div class="%s">%s</div>', $classes, do_shortcode($content) );
@@ -331,6 +331,7 @@ if (!empty($centertitle) && $centertitle == "true") {
 function smpl_shortcode_alert( $atts, $content = null ) {
 
     $default = array(
+        'class' => '',
         'style' => 'info', // 'info','alert','warn','success','idea'
         'show_icon' => 'true'
     );
@@ -340,8 +341,9 @@ function smpl_shortcode_alert( $atts, $content = null ) {
     $classes = 'note';
 
 
-    if( in_array( $style, array( 'info','alert','warn','success','download','idea' ) ) ) {
-    	$classes .= sprintf( ' %s', $style );
+    if( in_array( $style, array( 'info','alert','warn','success','download','idea' ) ) || in_array( $class, array( 'info','alert','warn','success','download','idea' ) ) ) {
+      $classes .= sprintf( ' %s', $style );
+        $classes .= sprintf( ' %s', $class );
     }
     if ($show_icon == "false") {
         $classes .= ' no-icon';
@@ -506,14 +508,14 @@ function smpl_shortcode_accordion( $atts, $content = null ) {
  */
 function smpl_shortcode_toggle( $atts, $content = null ) {
 
-	$default = array(
+  $default = array(
         'title' => '',
         'open'  => 'false'
     );
-	extract( shortcode_atts( $default, $atts ) );
+  extract( shortcode_atts( $default, $atts ) );
 
     // Individual toggle ID
-	$toggle_id = uniqid( 'toggle_'.rand() );
+  $toggle_id = uniqid( 'toggle_'.rand() );
 
 
         // Is toggle open?
@@ -717,6 +719,7 @@ function smpl_shortcode_latest($atts, $content = null) {
     "num" => '4',
     "cols" => '1',
     "thumbs" => 'false',
+    "date" => 'false',
     "excerpt" => 'false',
     "length" => '50',
     "morelink" => '',
@@ -725,7 +728,6 @@ function smpl_shortcode_latest($atts, $content = null) {
     "type" => 'post',
     "parent" => '',
     "cat" => '',
-    "tag" => '',
     "orderby" => 'date',
     "order" => 'ASC'
     ), $atts));
@@ -734,8 +736,7 @@ function smpl_shortcode_latest($atts, $content = null) {
     $do_not_duplicate[] = $post->ID;
     $args = array(
       'post__not_in' => $do_not_duplicate,
-        'category_name' => $cat,
-        'tag' => $cat,
+    'cat' => $cat,
         'post_type' => $type,
         'post_parent'   => $parent,
         'showposts' => $num,
@@ -821,9 +822,19 @@ function smpl_shortcode_latest($atts, $content = null) {
             $result.='<div class="latest-title"><a href="'.get_permalink().'">'.the_title("","",false).'</a></div>';
         }
 
+        // post date
+        if ($date == 'false') {
+            $result.='<div class "postmeta small"><span class="post_written">'.get_the_date().'</span></div>';
+            # code...
+        }
+
         // thumbnail
         if (has_post_thumbnail() && $thumbs == 'true') {
+            if ( function_exists( 'st_timthumb' ) ) {
+            $result.= '<img alt="'.get_the_title().'" class="alignleft latest-img" src="'.get_bloginfo('template_directory').'/thumb.php?src='.get_image_path().'&amp;h='.$height.'&amp;w='.$width.'"/>';
+            } else {
             $result .= get_the_post_thumbnail( $post->ID, 'thumbnail',  array('class' => 'alignleft latest-img') );
+            }
         }
 
         // excerpt
