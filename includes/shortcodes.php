@@ -75,10 +75,12 @@ function smpl_shortcode_column( $atts, $content = null, $tag = '' ) {
             break;
 
         case 'two_third' :
+        case 'two_thirds' :
             $class .= 'two_thirds';
             break;
 
         case 'three_fourth' :
+        case 'three_fourths' :
             $class .= 'three_fourths';
             break;
 
@@ -87,14 +89,17 @@ function smpl_shortcode_column( $atts, $content = null, $tag = '' ) {
             break;
 
         case 'two_fifth' :
+        case 'two_fifths' :
             $class .= 'two_fifths';
             break;
 
         case 'three_fifth' :
+        case 'three_fifths' :
             $class .= 'three_fifth';
             break;
 
         case 'four_fifth' :
+        case 'four_fifths':
             $class .= 'four_fifth';
             break;
 
@@ -116,12 +121,10 @@ function smpl_shortcode_column( $atts, $content = null, $tag = '' ) {
 
 }
 
-function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
 
-    //// Determine if column is last in row
-    //$last = '';
-    //if( isset( $atts[0] ) && trim( $atts[0] ) == 'last')
-    //    $last = ' last';
+
+function smpl_shortcode_legacy_column_last( $atts, $content = null, $tag = '' ) {
+
 
     // Determine width of column
     $class = '';
@@ -145,10 +148,12 @@ function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
             break;
 
         case 'two_third_last' :
+        case 'two_thirds_last' :
             $class .= 'two_thirds last';
             break;
 
         case 'three_fourth_last' :
+        case 'three_fourths_last' :
             $class .= 'three_fourths last';
             break;
 
@@ -157,14 +162,17 @@ function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
             break;
 
         case 'two_fifth_last' :
+        case 'two_fifths_last' :
             $class .= 'two_fifths last';
             break;
 
         case 'three_fifth_last' :
+        case 'three_fifths_last' :
             $class .= 'three_fifth last';
             break;
 
         case 'four_fifth_last' :
+        case 'four_fifths_last' :
             $class .= 'four_fifth last';
             break;
 
@@ -185,7 +193,6 @@ function smpl_shortcode_column_last( $atts, $content = null, $tag = '' ) {
     return do_shortcode( $content );
 
 }
-
 
 /**
  * Clear Row

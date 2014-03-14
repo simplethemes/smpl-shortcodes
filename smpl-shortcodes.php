@@ -2,7 +2,7 @@
 /*
 Plugin Name: Simple Shortcodes
 Description: This plugin works in conjuction with the SMPL framework to create shortcodes for many of the framework's internal elements.
-Version: 1.0.5
+Version: 1.0.6
 Author: simplethemes
 Author URI: http://www.simplethemes.com
 License: GPL2
@@ -83,25 +83,34 @@ function smpl_shortcodes_init() {
 		add_shortcode( 'one_third', 'smpl_shortcode_column' );			// 1/3
 		add_shortcode( 'one_half', 'smpl_shortcode_column' );			// 1/2
 		add_shortcode( 'two_third', 'smpl_shortcode_column' );			// 2/3
+		add_shortcode( 'two_thirds', 'smpl_shortcode_column' );			// 2/3
 		add_shortcode( 'three_fourth', 'smpl_shortcode_column' );		// 3/4
+		add_shortcode( 'three_fourths', 'smpl_shortcode_column' );		// 3/4
 		add_shortcode( 'one_fifth', 'smpl_shortcode_column' );			// 1/5
 		add_shortcode( 'two_fifth', 'smpl_shortcode_column' );			// 2/5
+		add_shortcode( 'two_fifths', 'smpl_shortcode_column' );			// 2/5
 		add_shortcode( 'three_fifth', 'smpl_shortcode_column' );		// 3/5
+		add_shortcode( 'three_fifths', 'smpl_shortcode_column' );		// 3/5
 		add_shortcode( 'four_fifth', 'smpl_shortcode_column' );			// 4/5
+		add_shortcode( 'four_fifths', 'smpl_shortcode_column' );		// 4/5
 		add_shortcode( 'clear', 'smpl_shortcode_clear' );				// Clear row
 
 		// Legacy Columns
-		add_shortcode( 'one_sixth_last', 'smpl_shortcode_column_last' );			// 1/6
-		add_shortcode( 'one_fourth_last', 'smpl_shortcode_column_last' );			// 1/4
-		add_shortcode( 'one_third_last', 'smpl_shortcode_column_last' );			// 1/3
-		add_shortcode( 'one_half_last', 'smpl_shortcode_column_last' );			// 1/2
-		add_shortcode( 'two_third_last', 'smpl_shortcode_column_last' );			// 2/3
-		add_shortcode( 'three_fourth_last', 'smpl_shortcode_column_last' );		// 3/4
-		add_shortcode( 'one_fifth_last', 'smpl_shortcode_column_last' );			// 1/5
-		add_shortcode( 'two_fifth_last', 'smpl_shortcode_column_last' );			// 2/5
-		add_shortcode( 'three_fifth_last', 'smpl_shortcode_column_last' );		// 3/5
-		add_shortcode( 'four_fifth_last', 'smpl_shortcode_column_last' );			// 4/5
-
+		add_shortcode( 'one_sixth_last', 'smpl_shortcode_legacy_column_last' );			// 1/6
+		add_shortcode( 'one_fourth_last', 'smpl_shortcode_legacy_column_last' );		// 1/4
+		add_shortcode( 'one_third_last', 'smpl_shortcode_legacy_column_last' );			// 1/3
+		add_shortcode( 'one_half_last', 'smpl_shortcode_legacy_column_last' );			// 1/2
+		add_shortcode( 'two_third_last', 'smpl_shortcode_legacy_column_last' );			// 2/3
+		add_shortcode( 'two_thirds_last', 'smpl_shortcode_legacy_column_last' );		// 2/3
+		add_shortcode( 'three_fourth_last', 'smpl_shortcode_legacy_column_last' );		// 3/4
+		add_shortcode( 'three_fourths_last', 'smpl_shortcode_legacy_column_last' );		// 3/4
+		add_shortcode( 'one_fifth_last', 'smpl_shortcode_legacy_column_last' );			// 1/5
+		add_shortcode( 'two_fifth_last', 'smpl_shortcode_legacy_column_last' );			// 2/5
+		add_shortcode( 'two_fifths_last', 'smpl_shortcode_legacy_column_last' );		// 2/5
+		add_shortcode( 'three_fifth_last', 'smpl_shortcode_legacy_column_last' );		// 3/5
+		add_shortcode( 'three_fifths_last', 'smpl_shortcode_legacy_column_last' );		// 3/5
+		add_shortcode( 'four_fifth_last', 'smpl_shortcode_legacy_column_last' );		// 4/5
+		add_shortcode( 'four_fifths_last', 'smpl_shortcode_legacy_column_last' );		// 4/5
 
 		// Components
 		add_shortcode( 'button', 'smpl_shortcode_button' );
